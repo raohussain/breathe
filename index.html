@@ -24,7 +24,11 @@
 
     <script src='./lib/app.js'></script>
     <script type='text/javascript'>
-        const app = new Breathe(30, 300, 10);
+        const app = new Breathe({
+            sizeJump: 30,
+            maxWidth: 300,
+            minWidth: 10
+        });
 
         document.querySelector('#start-breathing').addEventListener('click', function () {
             app.start(100);
