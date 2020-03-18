@@ -24,7 +24,7 @@
 
     <script src='./lib/app.js'></script>
     <script type='text/javascript'>
-        const app = new Breathe();
+        const app = new Breathe(30, 300, 10);
 
         document.querySelector('#start-breathing').addEventListener('click', function () {
             app.start(100);
