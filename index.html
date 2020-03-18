@@ -17,7 +17,7 @@
             <p class='text-muted'>Simple breathing app to help you relieve stress</p>
 
             <button id='start-breathing' class='btn btn-dark mt-2'>Start Session</button>
-            <button id='stop-breathing' class='btn btn-outline-dark mt-2 ml-2'>Stop Session</button>
+            <button id='stop-breathing' class='btn btn-danger mt-2 ml-2 d-none'>Stop Session</button>
 
             <div class='breathe-container'></div>
         </div>
@@ -31,11 +31,20 @@
             minWidth: 10
         });
 
-        document.querySelector('#start-breathing').addEventListener('click', function () {
+        const startButton = document.querySelector('#start-breathing');
+        const stopButton = document.querySelector('#stop-breathing');
+
+        startButton.addEventListener('click', function () {
+            stopButton.classList.toggle('d-none');
+            startButton.classList.toggle('d-none');
+
             app.start();
         });
 
-        document.querySelector('#stop-breathing').addEventListener('click', function () {
+        stopButton.addEventListener('click', function () {
+            stopButton.classList.toggle('d-none');
+            startButton.classList.toggle('d-none');
+
             app.stop();
         });
 
