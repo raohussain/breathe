@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/raohussain/breathe/issues"
   },
-  "homepage": "https://github.com/raohussain/breathe#readme"
+  "homepage": "https://github.com/raohussain/breathe#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  }
 }
